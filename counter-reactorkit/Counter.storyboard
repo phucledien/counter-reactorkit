@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14854.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5jk-Hd-q3d">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14806.4"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Counter View Controller-->
+        <scene sceneID="UUc-NY-ffm">
+            <objects>
+                <viewController storyboardIdentifier="Counter" id="5jk-Hd-q3d" customClass="CounterViewController" customModule="counter_reactorkit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yq1-bX-Ama">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="suW-tr-hLm">
+                                <rect key="frame" x="166.5" y="323" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DXN-Ql-ydV">
+                                <rect key="frame" x="106.5" y="318.5" width="30" height="30"/>
+                                <state key="normal" title="-"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RjF-jg-YU0">
+                                <rect key="frame" x="238.5" y="318.5" width="30" height="30"/>
+                                <state key="normal" title="+"/>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="1HO-Nj-ShB">
+                                <rect key="frame" x="177.5" y="364" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="1HO-Nj-ShB" firstAttribute="centerX" secondItem="suW-tr-hLm" secondAttribute="centerX" id="0tW-It-HGC"/>
+                            <constraint firstItem="RjF-jg-YU0" firstAttribute="leading" secondItem="suW-tr-hLm" secondAttribute="trailing" constant="30" id="5pf-U6-cgV"/>
+                            <constraint firstItem="RjF-jg-YU0" firstAttribute="centerY" secondItem="suW-tr-hLm" secondAttribute="centerY" id="HWj-c9-Toa"/>
+                            <constraint firstItem="DXN-Ql-ydV" firstAttribute="centerY" secondItem="suW-tr-hLm" secondAttribute="centerY" id="Khd-f9-NLe"/>
+                            <constraint firstItem="suW-tr-hLm" firstAttribute="leading" secondItem="DXN-Ql-ydV" secondAttribute="trailing" constant="30" id="M6J-Lb-w30"/>
+                            <constraint firstItem="1HO-Nj-ShB" firstAttribute="top" secondItem="suW-tr-hLm" secondAttribute="bottom" constant="20" id="krp-yS-aR2"/>
+                            <constraint firstItem="suW-tr-hLm" firstAttribute="centerX" secondItem="yq1-bX-Ama" secondAttribute="centerX" id="lg6-JK-bba"/>
+                            <constraint firstItem="suW-tr-hLm" firstAttribute="centerY" secondItem="yq1-bX-Ama" secondAttribute="centerY" id="q9q-rZ-yJG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PJX-Es-pSC"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="1HO-Nj-ShB" id="HZK-W5-krI"/>
+                        <outlet property="btnDecrease" destination="DXN-Ql-ydV" id="UHD-70-qvV"/>
+                        <outlet property="btnIncrease" destination="RjF-jg-YU0" id="vte-90-u2S"/>
+                        <outlet property="lblValue" destination="suW-tr-hLm" id="yw5-5v-W9L"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dpj-WT-0yB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="133"/>
+        </scene>
+    </scenes>
+</document>
